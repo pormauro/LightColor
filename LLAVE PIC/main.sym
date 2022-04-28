@@ -1,0 +1,67 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     caracter
+02A     A
+02B     B
+02C     C
+02D     Result
+02E-03E TextoLlave
+03F     LargoTextoLlave
+040     Indice
+041     MAIN.@SCRATCH
+042     @delay_ms1.P1
+043     RDA_isr.@SCRATCH
+044     RDA_isr.@SCRATCH
+045     @MUL88.P1
+046     @MUL88.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY.P1
+
+00C2  @delay_ms1
+0065  RDA_isr
+0035  @const55
+0040  @MUL88
+00D6  MAIN
+00D6  @cinit
+
+Project Files:
+    main.c
+    ..\CCS\main.h
+    ..\..\..\..\..\Archivos de programa\PICC\devices\16F628A.h
+
+Units:
+    C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.err
+    Ext Symbols: C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.esym
+    INHX8:       C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.hex
+    Symbols:     C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.sym
+    List:        C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.lst
+    Debug/COFF:  C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.cof
+    Call Tree:   main.tre
+    Statistics:  main.sta

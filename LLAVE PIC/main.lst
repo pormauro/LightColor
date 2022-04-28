@@ -1,0 +1,371 @@
+CCS PCM C Compiler, Version 4.032, 62930               11-ene-15 11:38
+
+               Filename: C:\Documents and Settings\Massa\Mis documentos\Llave\Copia de CCS\main.lst
+
+               ROM used: 323 words (16%)
+                         Largest free fragment is 1725
+               RAM used: 40 (18%) at main() level
+                         45 (20%) worst case
+               Stack:    3 worst case (1 in main + 2 for interrupts)
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   0D6
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   7F,W
+0009:  MOVWF  20
+000A:  MOVF   0A,W
+000B:  MOVWF  28
+000C:  CLRF   0A
+000D:  SWAPF  20,F
+000E:  MOVF   04,W
+000F:  MOVWF  22
+0010:  MOVF   77,W
+0011:  MOVWF  23
+0012:  MOVF   78,W
+0013:  MOVWF  24
+0014:  MOVF   79,W
+0015:  MOVWF  25
+0016:  MOVF   7A,W
+0017:  MOVWF  26
+0018:  MOVF   7B,W
+0019:  MOVWF  27
+001A:  BCF    03.7
+001B:  BCF    03.5
+001C:  MOVLW  8C
+001D:  MOVWF  04
+001E:  BTFSS  00.5
+001F:  GOTO   022
+0020:  BTFSC  0C.5
+0021:  GOTO   065
+0022:  MOVF   22,W
+0023:  MOVWF  04
+0024:  MOVF   23,W
+0025:  MOVWF  77
+0026:  MOVF   24,W
+0027:  MOVWF  78
+0028:  MOVF   25,W
+0029:  MOVWF  79
+002A:  MOVF   26,W
+002B:  MOVWF  7A
+002C:  MOVF   27,W
+002D:  MOVWF  7B
+002E:  MOVF   28,W
+002F:  MOVWF  0A
+0030:  SWAPF  21,W
+0031:  MOVWF  03
+0032:  SWAPF  7F,F
+0033:  SWAPF  7F,W
+0034:  RETFIE
+.................... #include "C:\Documents and Settings\Massa\Mis documentos\Llave\CCS\main.h" 
+.................... #include <16F628A.h> 
+.................... //////// Standard Header file for the PIC16F628A device //////////////// 
+.................... #device PIC16F628A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES HS                       //High speed Osc (> 4mhz) 
+.................... #FUSES NOPUT                    //No Power Up Timer 
+.................... #FUSES PROTECT                  //Code not protected from reading 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOMCLR                   //Master Clear pin used for I/O 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOCPD                    //No EE protection 
+....................  
+.................... #use delay(clock=20000000) 
+*
+00C2:  MOVLW  42
+00C3:  MOVWF  04
+00C4:  BCF    03.7
+00C5:  MOVF   00,W
+00C6:  BTFSC  03.2
+00C7:  GOTO   0D5
+00C8:  MOVLW  06
+00C9:  MOVWF  78
+00CA:  CLRF   77
+00CB:  DECFSZ 77,F
+00CC:  GOTO   0CB
+00CD:  DECFSZ 78,F
+00CE:  GOTO   0CA
+00CF:  MOVLW  7B
+00D0:  MOVWF  77
+00D1:  DECFSZ 77,F
+00D2:  GOTO   0D1
+00D3:  DECFSZ 00,F
+00D4:  GOTO   0C8
+00D5:  RETLW  00
+.................... #use rs232(baud=250000,parity=N,xmit=PIN_B2,rcv=PIN_B1,bits=8) 
+....................  
+....................  
+....................  
+.................... char caracter; 
+.................... int A; int B; int C; int Result; 
+.................... char TextoLlave[]="PP Iluminaciones"; 
+*
+00E4:  MOVLW  50
+00E5:  MOVWF  2E
+00E6:  MOVWF  2F
+00E7:  MOVLW  20
+00E8:  MOVWF  30
+00E9:  MOVLW  49
+00EA:  MOVWF  31
+00EB:  MOVLW  6C
+00EC:  MOVWF  32
+00ED:  MOVLW  75
+00EE:  MOVWF  33
+00EF:  MOVLW  6D
+00F0:  MOVWF  34
+00F1:  MOVLW  69
+00F2:  MOVWF  35
+00F3:  MOVLW  6E
+00F4:  MOVWF  36
+00F5:  MOVLW  61
+00F6:  MOVWF  37
+00F7:  MOVLW  63
+00F8:  MOVWF  38
+00F9:  MOVLW  69
+00FA:  MOVWF  39
+00FB:  MOVLW  6F
+00FC:  MOVWF  3A
+00FD:  MOVLW  6E
+00FE:  MOVWF  3B
+00FF:  MOVLW  65
+0100:  MOVWF  3C
+0101:  MOVLW  73
+0102:  MOVWF  3D
+0103:  CLRF   3E
+.................... int LargoTextoLlave=16; 
+0104:  MOVLW  10
+0105:  MOVWF  3F
+.................... int Indice=0; 
+0106:  CLRF   40
+....................  
+.................... #int_RDA 
+.................... void  RDA_isr(void)  
+.................... { 
+....................     caracter=getchar(); 
+*
+0065:  BTFSS  0C.5
+0066:  GOTO   065
+0067:  MOVF   1A,W
+0068:  MOVWF  29
+....................     if(Indice==LargoTextoLlave){A=caracter;Indice++;}else{ 
+0069:  MOVF   3F,W
+006A:  SUBWF  40,W
+006B:  BTFSS  03.2
+006C:  GOTO   071
+006D:  MOVF   29,W
+006E:  MOVWF  2A
+006F:  INCF   40,F
+0070:  GOTO   0BF
+....................         if(Indice==LargoTextoLlave+1){B=caracter;Indice++;}else{ 
+0071:  MOVLW  01
+0072:  ADDWF  3F,W
+0073:  SUBWF  40,W
+0074:  BTFSS  03.2
+0075:  GOTO   07A
+0076:  MOVF   29,W
+0077:  MOVWF  2B
+0078:  INCF   40,F
+0079:  GOTO   0BF
+....................             if(Indice==LargoTextoLlave+2){C=caracter;Indice=0; 
+007A:  MOVLW  02
+007B:  ADDWF  3F,W
+007C:  SUBWF  40,W
+007D:  BTFSS  03.2
+007E:  GOTO   0B0
+007F:  MOVF   29,W
+0080:  MOVWF  2C
+0081:  CLRF   40
+....................                printf("TodoOk"); 
+0082:  CLRF   43
+0083:  MOVF   43,W
+0084:  CALL   035
+0085:  INCF   43,F
+0086:  MOVWF  77
+0087:  MOVF   77,W
+0088:  BTFSS  0C.4
+0089:  GOTO   088
+008A:  MOVWF  19
+008B:  MOVLW  06
+008C:  SUBWF  43,W
+008D:  BTFSS  03.2
+008E:  GOTO   083
+....................                Result=(B/16)*(C/16); 
+008F:  SWAPF  2B,W
+0090:  MOVWF  43
+0091:  MOVLW  0F
+0092:  ANDWF  43,F
+0093:  SWAPF  2C,W
+0094:  MOVWF  77
+0095:  MOVLW  0F
+0096:  ANDWF  77,F
+0097:  MOVF   77,W
+0098:  MOVWF  44
+0099:  MOVF   43,W
+009A:  MOVWF  45
+009B:  MOVF   77,W
+009C:  MOVWF  46
+009D:  GOTO   040
+009E:  MOVF   78,W
+009F:  MOVWF  2D
+....................                if(255<Result){Result=255;} 
+00A0:  GOTO   0A3
+00A1:  MOVLW  FF
+00A2:  MOVWF  2D
+....................                putchar(Result); 
+00A3:  MOVF   2D,W
+00A4:  BTFSS  0C.4
+00A5:  GOTO   0A4
+00A6:  MOVWF  19
+....................                putchar(B); 
+00A7:  MOVF   2B,W
+00A8:  BTFSS  0C.4
+00A9:  GOTO   0A8
+00AA:  MOVWF  19
+....................                putchar(C); 
+00AB:  MOVF   2C,W
+00AC:  BTFSS  0C.4
+00AD:  GOTO   0AC
+00AE:  MOVWF  19
+....................             }else{ 
+00AF:  GOTO   0BF
+....................                 if(Indice<LargoTextoLlave){ 
+00B0:  MOVF   3F,W
+00B1:  SUBWF  40,W
+00B2:  BTFSC  03.0
+00B3:  GOTO   0BF
+....................                     if(caracter==TextoLlave[Indice]){ 
+00B4:  MOVLW  2E
+00B5:  ADDWF  40,W
+00B6:  MOVWF  04
+00B7:  BCF    03.7
+00B8:  MOVF   00,W
+00B9:  SUBWF  29,W
+00BA:  BTFSS  03.2
+00BB:  GOTO   0BE
+....................                         Indice++; 
+00BC:  INCF   40,F
+....................                     }else{ 
+00BD:  GOTO   0BF
+....................                         Indice=0; 
+00BE:  CLRF   40
+....................                     } 
+....................                 } 
+....................             } 
+....................         } 
+....................      } 
+.................... } 
+....................  
+....................  
+00BF:  BCF    0C.5
+00C0:  BCF    0A.3
+00C1:  GOTO   022
+.................... void main() 
+.................... { 
+*
+00D6:  CLRF   04
+00D7:  BCF    03.7
+00D8:  MOVLW  1F
+00D9:  ANDWF  03,F
+00DA:  MOVLW  04
+00DB:  BSF    03.5
+00DC:  MOVWF  19
+00DD:  MOVLW  A6
+00DE:  MOVWF  18
+00DF:  MOVLW  90
+00E0:  BCF    03.5
+00E1:  MOVWF  18
+00E2:  MOVLW  07
+00E3:  MOVWF  1F
+....................  
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+*
+0107:  BSF    03.5
+0108:  MOVF   01,W
+0109:  ANDLW  C7
+010A:  IORLW  08
+010B:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+010C:  BCF    03.5
+010D:  CLRF   10
+....................    setup_timer_2(T2_DISABLED,0,1); 
+010E:  MOVLW  00
+010F:  MOVWF  78
+0110:  MOVWF  12
+0111:  MOVLW  00
+0112:  BSF    03.5
+0113:  MOVWF  12
+....................    setup_comparator(NC_NC_NC_NC); 
+0114:  MOVLW  07
+0115:  BCF    03.5
+0116:  MOVWF  1F
+0117:  BSF    03.5
+0118:  MOVF   05,W
+0119:  MOVLW  10
+011A:  MOVWF  77
+011B:  DECFSZ 77,F
+011C:  GOTO   11B
+011D:  NOP
+011E:  BCF    03.5
+011F:  MOVF   1F,W
+0120:  BCF    0C.6
+....................    setup_vref(FALSE); 
+0121:  BSF    03.5
+0122:  CLRF   1F
+....................  
+....................    enable_interrupts(INT_RDA); 
+0123:  BSF    0C.5
+....................    enable_interrupts(GLOBAL); 
+0124:  MOVLW  C0
+0125:  BCF    03.5
+0126:  IORWF  0B,F
+....................  
+....................    set_tris_a(0); 
+0127:  MOVLW  00
+0128:  TRIS   5
+....................    set_tris_b(2); 
+0129:  MOVLW  02
+012A:  TRIS   6
+....................     
+....................    while(1){ 
+....................         //putchar(A++); 
+....................         delay_ms(500);  
+012B:  MOVLW  02
+012C:  MOVWF  41
+012D:  MOVLW  FA
+012E:  MOVWF  42
+012F:  CALL   0C2
+0130:  DECFSZ 41,F
+0131:  GOTO   12D
+....................         output_high(PIN_A1); 
+0132:  BSF    03.5
+0133:  BCF    05.1
+0134:  BCF    03.5
+0135:  BSF    05.1
+....................         delay_ms(500);  
+0136:  MOVLW  02
+0137:  MOVWF  41
+0138:  MOVLW  FA
+0139:  MOVWF  42
+013A:  CALL   0C2
+013B:  DECFSZ 41,F
+013C:  GOTO   138
+....................         output_low(PIN_A1); 
+013D:  BSF    03.5
+013E:  BCF    05.1
+013F:  BCF    03.5
+0140:  BCF    05.1
+....................    } 
+0141:  GOTO   12B
+.................... } 
+0142:  SLEEP
+
+Configuration Fuses:
+   Word  1: 1F0A   HS NOWDT NOPUT PROTECT NOBROWNOUT NOMCLR NOLVP NOCPD

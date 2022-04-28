@@ -1,0 +1,3 @@
+Se ha generado el archivo .cab para su aplicación como 'C:\Users\Mauro\Desktop\TCI 2014 v1.2\Nueva carpeta\Project1.CAB'.
+
+También hay un archivo de proceso por lotes en el directorio de soporte (C:\Users\Mauro\Desktop\TCI 2014 v1.2\Nueva carpeta\Support\Project1.BAT) que le permitirá volver a crear el archivo .cab en caso de que modifique alguno de los archivos.
