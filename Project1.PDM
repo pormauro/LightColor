@@ -1,0 +1,220 @@
+[Root]
+Most Recent Package=Light Color
+
+
+[Package|Paquete de instalación estándar 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Paquete
+
+[Package|Paquete de instalación estándar 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Paquete de instalación estándar 1|Files Found]
+
+[Package|Paquete de instalación estándar 1|Files Released]
+
+[Package|Paquete de instalación estándar 1|Missing Dependency Information]
+C:\Windows\System32\msimg32.dll=
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18201_none_ec80f00e8593ece5\comctl32.dll=
+C:\Windows\System32\ftd2xx.dll=
+
+[Package|Paquete de instalación estándar 1|Out-of-Date Dependency Information]
+C:\Windows\SysWOW64\COMDLG32.OCX=
+C:\Windows\SysWOW64\comctl32.ocx=
+
+[Package|Paquete de instalación estándar 1|Files Added]
+
+[Package|Paquete de instalación estándar 1|Files Removed]
+
+[Package|Paquete de instalación estándar 1|Files In Project]
+C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Project1.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\VB6ES.DLL=Yes
+C:\Windows\System32\ftd2xx.dll=Yes
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18201_none_ec80f00e8593ece5\comctl32.dll=Yes
+C:\Windows\System32\msimg32.dll=Yes
+C:\Windows\SysWOW64\comctl32.ocx=Yes
+C:\Windows\SysWOW64\CMCTLES.DLL=Yes
+C:\Windows\SysWOW64\COMDLG32.OCX=Yes
+C:\Windows\SysWOW64\CMDLGES.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Paquete de instalación estándar 1|Configure Registry Files]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Install Locations]
+C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Project1.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB6ES.DLL=$(WinSysPath)
+C:\Windows\System32\ftd2xx.dll=$(WinSysPath)
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18201_none_ec80f00e8593ece5\comctl32.dll=$(WinSysPath)
+C:\Windows\System32\msimg32.dll=$(WinSysPath)
+C:\Windows\SysWOW64\comctl32.ocx=$(WinSysPath)
+C:\Windows\SysWOW64\CMCTLES.DLL=$(WinSysPath)
+C:\Windows\SysWOW64\COMDLG32.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\CMDLGES.DLL=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Paquete de instalación estándar 1|Configure Shared Files]
+Applicable=Yes
+C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Project1.exe=Yes
+
+[Package|Paquete de instalación estándar 1|Distribution]
+Type=single
+Size=
+Title=Project1
+
+[Package|Paquete de instalación estándar 1|IconGroups]
+Group0=Project1
+PrivateGroup0=Verdadero
+Parent0=$(Programs)
+
+[Package|Paquete de instalación estándar 1|Project1]
+Icon1=Project1.exe
+Title1=Project1
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Paquete de instalación estándar 1|Package]
+PackageFolder=C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Paquete
+ProjectFolder=C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia
+ServerSideCab=
+File1=C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Paquete\setup.exe
+File2=C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Paquete\Setup.Lst
+File3=C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Paquete\Project1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Light Color|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Users\Mauro\Desktop\TCI 2014 v1.2\Nueva carpeta
+
+[Package|Light Color|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Light Color|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Light Color|Files Found]
+
+[Package|Light Color|Files Released]
+
+[Package|Light Color|Missing Dependency Information]
+C:\Windows\System32\msimg32.dll=
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18201_none_ec80f00e8593ece5\comctl32.dll=
+C:\Windows\System32\ftd2xx.dll=
+
+[Package|Light Color|Out-of-Date Dependency Information]
+C:\Windows\SysWOW64\COMDLG32.OCX=
+C:\Windows\SysWOW64\comctl32.ocx=
+
+[Package|Light Color|Files Added]
+
+[Package|Light Color|Files Removed]
+
+[Package|Light Color|Files In Project]
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\VB6ES.DLL=Yes
+C:\Windows\System32\ftd2xx.dll=Yes
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18201_none_ec80f00e8593ece5\comctl32.dll=Yes
+C:\Windows\System32\msimg32.dll=Yes
+C:\Windows\SysWOW64\comctl32.ocx=Yes
+C:\Windows\SysWOW64\CMCTLES.DLL=Yes
+C:\Windows\SysWOW64\COMDLG32.OCX=Yes
+C:\Windows\SysWOW64\CMDLGES.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Users\Mauro\Desktop\TCI 2015 v1.3\Project1.exe=Yes
+
+[Package|Light Color|Configure Registry Files]
+Applicable=No
+
+[Package|Light Color|Configure Remote Servers]
+Applicable=No
+
+[Package|Light Color|Install Locations]
+C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Project1.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB6ES.DLL=$(WinSysPath)
+C:\Windows\System32\ftd2xx.dll=$(WinSysPath)
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18201_none_ec80f00e8593ece5\comctl32.dll=$(WinSysPath)
+C:\Windows\System32\msimg32.dll=$(WinSysPath)
+C:\Windows\SysWOW64\comctl32.ocx=$(WinSysPath)
+C:\Windows\SysWOW64\CMCTLES.DLL=$(WinSysPath)
+C:\Windows\SysWOW64\COMDLG32.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\CMDLGES.DLL=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Users\Mauro\Desktop\TCI 2014 v1.2\Project1.exe=$(AppPath)
+C:\Users\Mauro\Desktop\TCI 2015 v1.3\Project1.exe=$(AppPath)
+
+[Package|Light Color|Configure Shared Files]
+Applicable=Yes
+C:\Users\Mauro\Google Drive\TCI 2013 - copia (4) - copia\Project1.exe=Yes
+C:\Users\Mauro\Desktop\TCI 2014 v1.2\Project1.exe=Yes
+C:\Users\Mauro\Desktop\TCI 2015 v1.3\Project1.exe=Yes
+
+[Package|Light Color|Distribution]
+Type=single
+Size=
+Title=Light Color
+
+[Package|Light Color|IconGroups]
+Group0=Light Color
+PrivateGroup0=Falso
+Parent0=$(Programs)
+
+[Package|Light Color|Light Color]
+Icon1=Project1.exe
+Title1=Light Color
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Light Color|Package]
+PackageFolder=C:\Users\Mauro\Desktop\TCI 2014 v1.2\Nueva carpeta
+ProjectFolder=C:\Users\Mauro\Desktop\TCI 2015 v1.3
+ServerSideCab=
+File1=C:\Users\Mauro\Desktop\TCI 2014 v1.2\Nueva carpeta\setup.exe
+File2=C:\Users\Mauro\Desktop\TCI 2014 v1.2\Nueva carpeta\Setup.Lst
+File3=C:\Users\Mauro\Desktop\TCI 2014 v1.2\Nueva carpeta\Project1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
